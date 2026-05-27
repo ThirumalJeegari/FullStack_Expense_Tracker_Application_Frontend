@@ -74,7 +74,7 @@ if option == "Add Expense":
             if res.status_code == 200:
                 st.success(res.json()["message"])
             else:
-                st.error("Failed to Add Expense")
+                st.error(res.text)
 
         except Exception as e:
             st.error(f"Error: {e}")
